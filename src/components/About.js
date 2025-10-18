@@ -48,7 +48,7 @@ const About = () => {
             viewport={{ once: true }}
             className="text-center p-6"
           >
-            <FaEye className="text-5xl text-primary-500 mx-auto mb-4" />
+            <FaEye className="text-5xl text-blue-600 mx-auto mb-4" />
             <h3 className="text-2xl font-semibold mb-4">Vision</h3>
             <p className="text-gray-600">
               To be the leading provider of innovative technology solutions that empower businesses to achieve their full potential in the digital age.
@@ -61,7 +61,7 @@ const About = () => {
             viewport={{ once: true }}
             className="text-center p-6"
           >
-            <FaBullseye className="text-5xl text-primary-500 mx-auto mb-4" />
+            <FaBullseye className="text-5xl text-emerald-600 mx-auto mb-4" />
             <h3 className="text-2xl font-semibold mb-4">Mission</h3>
             <p className="text-gray-600">
               To deliver cutting-edge software solutions, AI tools, and technology services that drive efficiency, innovation, and growth for our clients.
@@ -74,7 +74,7 @@ const About = () => {
             viewport={{ once: true }}
             className="text-center p-6"
           >
-            <FaUsers className="text-5xl text-primary-500 mx-auto mb-4" />
+            <FaUsers className="text-5xl text-slate-600 mx-auto mb-4" />
             <h3 className="text-2xl font-semibold mb-4">Values</h3>
             <p className="text-gray-600">
               Innovation, integrity, excellence, and customer-centricity guide everything we do as we build lasting partnerships with our clients.
@@ -94,7 +94,7 @@ const About = () => {
             to create solutions that not only meet today's challenges but anticipate tomorrow's opportunities. 
             Every line of code we write, every solution we design, is crafted with our clients' success in mind."
           </p>
-          <p className="text-center mt-4 font-semibold text-primary-600">- John Smith, CEO & Founder</p>
+          <p className="text-center mt-4 font-semibold text-blue-600">- John Smith, CEO & Founder</p>
         </motion.div>
 
         <motion.div
@@ -116,7 +116,7 @@ const About = () => {
                   className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
                 />
                 <h4 className="text-xl font-semibold mb-2">{member.name}</h4>
-                <p className="text-primary-600">{member.role}</p>
+                <p className="text-emerald-600">{member.role}</p>
               </motion.div>
             ))}
           </div>

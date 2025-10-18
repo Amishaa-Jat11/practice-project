@@ -7,21 +7,22 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          900: '#1e3a8a',
+          50: '#e6f4fb',
+          100: '#b3dff4',
+          500: '#2A91C2',
+          600: '#2581b0',
+          700: '#1f6e96',
+          900: '#1a5a7c',
         },
         secondary: {
-          500: '#6366f1',
-          600: '#4f46e5',
+          500: '#83C447',
+          600: '#75b03f',
         }
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.6s ease-out',
+        'gradient': 'gradient 3s ease infinite',
       },
       keyframes: {
         fadeIn: {
@@ -31,6 +32,10 @@ module.exports = {
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        gradient: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
         }
       }
     },

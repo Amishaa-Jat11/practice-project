@@ -5,25 +5,25 @@ import { FaUsers, FaCalculator, FaRobot, FaPlane } from 'react-icons/fa';
 const Services = () => {
   const services = [
     {
-      icon: <FaUsers className="text-5xl text-primary-500" />,
+      icon: <FaUsers className="text-5xl text-blue-600" />,
       title: "HR Software",
       description: "Comprehensive human resource management solutions with employee tracking, payroll, and performance analytics.",
       features: ["Employee Management", "Payroll Processing", "Performance Tracking", "Leave Management"]
     },
     {
-      icon: <FaCalculator className="text-5xl text-primary-500" />,
+      icon: <FaCalculator className="text-5xl text-emerald-600" />,
       title: "Accounting App",
       description: "Advanced accounting software for financial management, invoicing, and real-time business insights.",
       features: ["Financial Reporting", "Invoice Management", "Tax Compliance", "Budget Planning"]
     },
     {
-      icon: <FaRobot className="text-5xl text-primary-500" />,
+      icon: <FaRobot className="text-5xl text-slate-600" />,
       title: "AI Tools",
       description: "Cutting-edge artificial intelligence solutions for automation, data analysis, and predictive modeling.",
       features: ["Machine Learning", "Data Analytics", "Process Automation", "Predictive Insights"]
     },
     {
-      icon: <FaPlane className="text-5xl text-primary-500" />,
+      icon: <FaPlane className="text-5xl text-blue-500" />,
       title: "Drones",
       description: "Professional drone solutions for surveillance, mapping, delivery, and industrial applications.",
       features: ["Aerial Surveillance", "Mapping & Survey", "Delivery Services", "Industrial Inspection"]
@@ -54,7 +54,7 @@ const Services = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ scale: 1.02 }}
-              className="bg-gradient-to-br from-gray-50 to-primary-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <div className="flex justify-center mb-6">
                 {service.icon}
@@ -68,7 +68,7 @@ const Services = () => {
               <div className="space-y-2">
                 {service.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-center">
-                    <div className="w-2 h-2 bg-primary-500 rounded-full mr-3"></div>
+                    <div className="w-2 h-2 bg-emerald-500 rounded-full mr-3"></div>
                     <span className="text-gray-700">{feature}</span>
                   </div>
                 ))}
@@ -76,7 +76,7 @@ const Services = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full mt-6 bg-primary-500 text-white py-3 rounded-lg font-semibold hover:bg-primary-600 transition-colors"
+                className="w-full mt-6 bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
                 Learn More
               </motion.button>
@@ -97,7 +97,7 @@ const Services = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-secondary-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-secondary-600 transition-colors"
+            className="bg-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
           >
             Contact Us for Custom Solutions
           </motion.button>

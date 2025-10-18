@@ -90,7 +90,7 @@ const Projects = () => {
                   className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
                 />
                 <div className="absolute top-4 right-4">
-                  <span className="bg-primary-500 text-white px-3 py-1 rounded-full text-sm">
+                  <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
                     {project.category}
                   </span>
                 </div>
@@ -108,7 +108,7 @@ const Projects = () => {
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="bg-primary-100 text-primary-700 px-2 py-1 rounded text-sm"
+                      className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-sm"
                     >
                       {tech}
                     </span>
@@ -118,7 +118,7 @@ const Projects = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex items-center text-primary-600 hover:text-primary-700 font-semibold"
+                  className="flex items-center text-emerald-600 hover:text-emerald-700 font-semibold"
                 >
                   View Details <FaExternalLinkAlt className="ml-2" />
                 </motion.button>

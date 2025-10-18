@@ -59,7 +59,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Your full name"
                   />
                 </div>
@@ -73,7 +73,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="your.email@company.com"
                   />
                 </div>
@@ -88,7 +88,7 @@ const Contact = () => {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Your company name"
                 />
               </div>
@@ -103,7 +103,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows="5"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Tell us about your project or requirements..."
                 ></textarea>
               </div>
@@ -112,7 +112,7 @@ const Contact = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="w-full bg-primary-500 text-white py-3 rounded-lg font-semibold hover:bg-primary-600 transition-colors"
+                className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
                 Send Message
               </motion.button>
@@ -130,7 +130,7 @@ const Contact = () => {
               
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <FaEnvelope className="text-primary-500 text-xl mr-4" />
+                  <FaEnvelope className="text-blue-600 text-xl mr-4" />
                   <div>
                     <p className="font-medium">Email</p>
                     <p className="text-gray-600">contact@nspt.com</p>
@@ -138,7 +138,7 @@ const Contact = () => {
                 </div>
                 
                 <div className="flex items-center">
-                  <FaPhone className="text-primary-500 text-xl mr-4" />
+                  <FaPhone className="text-emerald-600 text-xl mr-4" />
                   <div>
                     <p className="font-medium">Phone</p>
                     <p className="text-gray-600">+1 (555) 123-4567</p>
@@ -146,7 +146,7 @@ const Contact = () => {
                 </div>
                 
                 <div className="flex items-center">
-                  <FaMapMarkerAlt className="text-primary-500 text-xl mr-4" />
+                  <FaMapMarkerAlt className="text-slate-600 text-xl mr-4" />
                   <div>
                     <p className="font-medium">Address</p>
                     <p className="text-gray-600">123 Tech Street, Silicon Valley, CA 94000</p>
@@ -185,9 +185,9 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-primary-50 rounded-lg p-6">
-              <h4 className="text-lg font-semibold mb-2 text-primary-900">Quick Response</h4>
-              <p className="text-primary-700">
+            <div className="bg-blue-50 rounded-lg p-6">
+              <h4 className="text-lg font-semibold mb-2 text-blue-900">Quick Response</h4>
+              <p className="text-blue-700">
                 We typically respond to all inquiries within 24 hours during business days.
               </p>
             </div>

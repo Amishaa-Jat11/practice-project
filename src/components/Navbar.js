@@ -1,18 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import logo from '../images/logo2.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const navItems = [
     { name: 'Home', href: '#home' },
@@ -27,19 +19,16 @@ const Navbar = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-lg' : 'bg-transparent'
-      }`}
+      className="fixed w-full z-50 transition-all duration-300 bg-white shadow-lg"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex-shrink-0"
+            className="flex-shrink-0 flex items-center"
           >
-            <h1 className={`text-2xl font-bold ${scrolled ? 'text-primary-900' : 'text-white'}`}>
-              NSPT
-            </h1>
+            <img src={logo} alt="NSPT Logo" className="h-12 w-auto mr-3" />
+           
           </motion.div>
 
           <div className="hidden md:block">
@@ -49,11 +38,7 @@ const Navbar = () => {
                   key={item.name}
                   href={item.href}
                   whileHover={{ scale: 1.05 }}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    scrolled
-                      ? 'text-gray-700 hover:text-primary-600'
-                      : 'text-white hover:text-primary-200'
-                  }`}
+                  className="px-3 py-2 rounded-md text-sm font-medium transition-colors text-gray-700 hover:text-blue-600"
                 >
                   {item.name}
                 </motion.a>
@@ -64,7 +49,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`${scrolled ? 'text-gray-700' : 'text-white'}`}
+              className="text-gray-700"
             >
               {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
             </button>
@@ -84,7 +69,7 @@ const Navbar = () => {
                 key={item.name}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="block px-3 py-2 text-gray-700 hover:text-primary-600"
+                className="block px-3 py-2 text-gray-700 hover:text-blue-600"
               >
                 {item.name}
               </a>

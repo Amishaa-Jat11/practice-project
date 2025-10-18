@@ -14,22 +14,22 @@ const Career = () => {
 
   const benefits = [
     {
-      icon: <FaUsers className="text-4xl text-primary-500" />,
+      icon: <FaUsers className="text-4xl text-blue-600" />,
       title: "Collaborative Environment",
       description: "Work with talented professionals in a supportive team atmosphere"
     },
     {
-      icon: <FaLightbulb className="text-4xl text-primary-500" />,
+      icon: <FaLightbulb className="text-4xl text-emerald-600" />,
       title: "Innovation Focus",
       description: "Be part of cutting-edge projects and emerging technologies"
     },
     {
-      icon: <FaGraduationCap className="text-4xl text-primary-500" />,
+      icon: <FaGraduationCap className="text-4xl text-slate-600" />,
       title: "Continuous Learning",
       description: "Professional development opportunities and skill enhancement programs"
     },
     {
-      icon: <FaHeart className="text-4xl text-primary-500" />,
+      icon: <FaHeart className="text-4xl text-blue-500" />,
       title: "Work-Life Balance",
       description: "Flexible schedules, remote work options, and comprehensive benefits"
     }
@@ -78,7 +78,7 @@ const Career = () => {
   };
 
   return (
-    <section id="careers" className="py-20 bg-gradient-to-br from-primary-50 to-secondary-50">
+    <section id="careers" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-emerald-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -141,7 +141,7 @@ const Career = () => {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => setShowForm(true)}
-                    className="mt-4 md:mt-0 bg-primary-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-primary-600 transition-colors"
+                    className="mt-4 md:mt-0 bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                   >
                     Apply Now
                   </motion.button>
@@ -165,7 +165,7 @@ const Career = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setShowForm(true)}
-            className="bg-secondary-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-secondary-600 transition-colors"
+            className="bg-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
           >
             Send General Application
           </motion.button>
