@@ -12,7 +12,7 @@ const About = () => {
     {
       name: "Sarah Johnson",
       role: "CTO",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop&crop=face"
     },
     {
       name: "Mike Chen",

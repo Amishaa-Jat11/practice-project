@@ -22,7 +22,7 @@ const Hero = () => {
   ];
 
   return (
-    <section id="home" className="min-h-screen relative bg-gradient-to-br from-slate-900 via-blue-900 to-emerald-800 flex items-center overflow-hidden">
+    <section id="home" className="min-h-screen relative bg-gradient-to-br from-blue-900 via-blue-800 to-emerald-700 flex items-center overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -70,7 +70,7 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }}
               className="border-2 border-white/50 text-white px-8 py-4 rounded-xl font-semibold backdrop-blur-sm hover:border-white transition-all duration-300"
             >
-              💡 Learn More
+               Learn More
             </motion.button>
           </motion.div>
 
@@ -85,9 +85,16 @@ const Hero = () => {
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8 + index * 0.2 }}
-                whileHover={{ scale: 1.05, y: -10 }}
-                className="bg-white/10 backdrop-blur-md rounded-xl p-8 text-center border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300"
+               
+                whileHover={{ 
+                  scale: 1.05, 
+                  y: -10,
+                  backgroundColor: "rgba(255, 255, 255, 0.15)",
+                  borderColor: "rgba(59, 130, 246, 0.8)",
+                  transition: { duration: 0 }
+                }}
+                transition={{ delay: 0 + index * 0.2, duration: 0 }}
+                className="bg-white/10 backdrop-blur-md rounded-xl p-8 text-center border border-white/20 shadow-xl"
               >
                 <div className="flex justify-center mb-4">
                   {feature.icon}

@@ -35,7 +35,7 @@ const Projects = () => {
     {
       title: "Smart City Infrastructure",
       description: "IoT-based city management platform with real-time monitoring and analytics",
-      image: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1f?w=500&h=300&fit=crop",
+      image: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=500&h=300&fit=crop",
       technologies: ["IoT", "Angular", "Node.js", "InfluxDB"],
       category: "Smart Solutions"
     },

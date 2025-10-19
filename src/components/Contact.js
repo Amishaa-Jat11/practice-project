@@ -81,7 +81,7 @@ const Contact = () => {
                 viewport={{ once: true }}
                 className="text-3xl font-bold mb-8 text-gray-800 text-center"
               >
-                💬 Send us a message
+                 Send us a message
               </motion.h3>
               <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
@@ -183,7 +183,7 @@ const Contact = () => {
                 className="w-full bg-gradient-to-r from-blue-600 to-emerald-600 text-white py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden group"
               >
                 <span className="relative z-10 flex items-center justify-center">
-                  🚀 Send Message
+                   Send Message
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.button>
@@ -203,7 +203,7 @@ const Contact = () => {
               viewport={{ once: true }}
               className="text-3xl font-bold mb-8 text-gray-800 text-center"
             >
-              📞 Contact Info
+               Contact Info
             </motion.h3>
             
             <div className="space-y-4">
