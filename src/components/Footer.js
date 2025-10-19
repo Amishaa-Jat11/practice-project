@@ -29,17 +29,28 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-gradient-to-br from-slate-900 via-blue-900 to-emerald-900 text-white relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0">
+        <div className="absolute top-10 left-10 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-10 right-10 w-40 h-40 bg-emerald-500/10 rounded-full blur-2xl"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            className="lg:col-span-2"
           >
-            <h3 className="text-2xl font-bold mb-4">NSPT</h3>
-            <p className="text-gray-400 mb-6 leading-relaxed">
+            <motion.h3 
+              className="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent"
+            >
+              Next Sphere Product & Technology
+            </motion.h3>
+            <p className="text-gray-300 mb-6 leading-relaxed text-lg">
               Empowering businesses with innovative technology solutions. 
               We transform ideas into powerful digital experiences.
             </p>
@@ -47,11 +58,12 @@ const Footer = () => {
               {socialLinks.map((social, index) => (
                 <motion.a
                   key={index}
-                  whileHover={{ scale: 1.2 }}
+                  whileHover={{ scale: 1.2, rotate: 360 }}
+                  whileTap={{ scale: 0.9 }}
                   href={social.href}
-                  className={`text-gray-400 ${social.color} transition-colors`}
+                  className="bg-white/10 backdrop-blur-sm p-3 rounded-full hover:bg-white/20 transition-all duration-300"
                 >
-                  <social.icon size={20} />
+                  <social.icon size={20} className="text-white" />
                 </motion.a>
               ))}
             </div>
@@ -64,34 +76,22 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
+            <h4 className="text-xl font-bold mb-6 text-blue-300">Quick Links</h4>
+            <ul className="space-y-3">
               {quickLinks.map((link, index) => (
-                <li key={index}>
+                <motion.li 
+                  key={index}
+                  whileHover={{ x: 5 }}
+                  transition={{ duration: 0.2 }}
+                >
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-300 hover:text-white transition-colors flex items-center group"
                   >
+                    <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     {link.name}
                   </a>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          {/* Services */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            <h4 className="text-lg font-semibold mb-4">Our Services</h4>
-            <ul className="space-y-2">
-              {services.map((service, index) => (
-                <li key={index}>
-                  <span className="text-gray-400">{service}</span>
-                </li>
+                </motion.li>
               ))}
             </ul>
           </motion.div>
@@ -101,77 +101,71 @@ const Footer = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
+            transition={{ delay: 0.2 }}
           >
-            <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
-            <div className="space-y-3">
-              <div className="flex items-center">
-                <FaEnvelope className="text-primary-500 mr-3" />
-                <span className="text-gray-400">contact@nspt.com</span>
-              </div>
-              <div className="flex items-center">
-                <FaPhone className="text-primary-500 mr-3" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-start">
-                <FaMapMarkerAlt className="text-primary-500 mr-3 mt-1" />
-                <span className="text-gray-400">
-                  123 Tech Street<br />
-                  Silicon Valley, CA 94000
+            <h4 className="text-xl font-bold mb-6 text-emerald-300">Contact Info</h4>
+            <div className="space-y-4">
+              <motion.div 
+                whileHover={{ x: 5 }}
+                className="flex items-center group"
+              >
+                <div className="bg-blue-600 p-2 rounded-lg mr-3 group-hover:bg-blue-500 transition-colors">
+                  <FaEnvelope className="text-white text-sm" />
+                </div>
+                <span className="text-gray-300">contact@nspt.com</span>
+              </motion.div>
+              <motion.div 
+                whileHover={{ x: 5 }}
+                className="flex items-center group"
+              >
+                <div className="bg-emerald-600 p-2 rounded-lg mr-3 group-hover:bg-emerald-500 transition-colors">
+                  <FaPhone className="text-white text-sm" />
+                </div>
+                <span className="text-gray-300">+1 (555) 123-4567</span>
+              </motion.div>
+              <motion.div 
+                whileHover={{ x: 5 }}
+                className="flex items-start group"
+              >
+                <div className="bg-slate-600 p-2 rounded-lg mr-3 mt-0.5 group-hover:bg-slate-500 transition-colors">
+                  <FaMapMarkerAlt className="text-white text-sm" />
+                </div>
+                <span className="text-gray-300">
+                  Silicon Valley, CA
                 </span>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>
 
-        {/* Newsletter Signup */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="border-t border-gray-800 mt-12 pt-8"
-        >
-          <div className="text-center mb-6">
-            <h4 className="text-xl font-semibold mb-2">Stay Updated</h4>
-            <p className="text-gray-400">Subscribe to our newsletter for the latest updates and insights</p>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
-            />
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-            >
-              Subscribe
-            </motion.button>
-          </div>
-        </motion.div>
+
 
         {/* Copyright */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="border-t border-gray-800 mt-8 pt-8 text-center"
+          className="border-t border-white/20 mt-12 pt-8"
         >
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 mb-4 md:mb-0">
-              © 2024 NSPT. All rights reserved.
+            <p className="text-gray-300 mb-4 md:mb-0 font-medium">
+              © 2024 Next Sphere Product & Technology. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <motion.a 
+                whileHover={{ y: -2 }}
+                href="#" 
+                className="text-gray-300 hover:text-white transition-colors"
+              >
                 Privacy Policy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              </motion.a>
+              <motion.a 
+                whileHover={{ y: -2 }}
+                href="#" 
+                className="text-gray-300 hover:text-white transition-colors"
+              >
                 Terms of Service
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                Cookie Policy
-              </a>
+              </motion.a>
             </div>
           </div>
         </motion.div>

@@ -86,7 +86,7 @@ const Career = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Join Our Team</h2>
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent mb-4">Join Our Team</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Be part of an innovative team that's shaping the future of technology. We're always looking for talented individuals who share our passion for excellence.
           </p>

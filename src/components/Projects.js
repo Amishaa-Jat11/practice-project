@@ -48,14 +48,7 @@ const Projects = () => {
     }
   ];
 
-  const clients = [
-    { name: "TechCorp", logo: "https://via.placeholder.com/150x80/3B82F6/FFFFFF?text=TechCorp" },
-    { name: "InnovateLab", logo: "https://via.placeholder.com/150x80/6366F1/FFFFFF?text=InnovateLab" },
-    { name: "DataSystems", logo: "https://via.placeholder.com/150x80/8B5CF6/FFFFFF?text=DataSystems" },
-    { name: "CloudTech", logo: "https://via.placeholder.com/150x80/06B6D4/FFFFFF?text=CloudTech" },
-    { name: "AI Solutions", logo: "https://via.placeholder.com/150x80/10B981/FFFFFF?text=AI+Solutions" },
-    { name: "SmartCity", logo: "https://via.placeholder.com/150x80/F59E0B/FFFFFF?text=SmartCity" }
-  ];
+
 
   return (
     <section id="projects" className="py-20 bg-gray-50">
@@ -66,7 +59,7 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Projects</h2>
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent mb-4">Our Projects</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Showcasing our successful implementations and innovative solutions across various industries
           </p>
@@ -127,28 +120,7 @@ const Projects = () => {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-3xl font-semibold text-center mb-12">Trusted by Leading Companies</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-            {clients.map((client, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.1 }}
-                className="flex justify-center"
-              >
-                <img
-                  src={client.logo}
-                  alt={client.name}
-                  className="h-12 object-contain opacity-60 hover:opacity-100 transition-opacity"
-                />
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+
       </div>
     </section>
   );

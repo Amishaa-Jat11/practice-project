@@ -39,7 +39,7 @@ const Services = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent mb-4">Our Services</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Comprehensive technology solutions designed to transform your business operations
           </p>
