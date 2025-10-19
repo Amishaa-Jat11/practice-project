@@ -1,10 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import logo1 from '../images/logo1.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['home', 'about', 'services', 'projects', 'contact', 'careers'];
+      const scrollPosition = window.scrollY + 100;
+      
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navItems = [
     { name: 'Home', href: '#home' },
@@ -44,7 +66,11 @@ const Navbar = () => {
                     backgroundColor: "rgba(59, 130, 246, 0.1)"
                   }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 text-gray-700 hover:text-blue-600 relative group"
+                  className={`px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 relative group ${
+                    activeSection === item.href.slice(1)
+                      ? 'text-blue-600'
+                      : 'text-gray-700 hover:text-blue-600'
+                  }`}
                 >
                   {item.name}
                   <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-emerald-600 group-hover:w-full transition-all duration-300"></span>
@@ -96,7 +122,11 @@ const Navbar = () => {
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ x: 10, backgroundColor: "rgba(59, 130, 246, 0.1)" }}
                 onClick={() => setIsOpen(false)}
-                className="block px-4 py-3 text-gray-700 hover:text-blue-600 rounded-lg font-medium transition-all duration-300"
+                className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
+                  activeSection === item.href.slice(1)
+                    ? 'text-blue-600'
+                    : 'text-gray-700 hover:text-blue-600'
+                }`}
               >
                 {item.name}
               </motion.a>
