@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebook, FaTwitter, FaLinkedin, FaYoutube } from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -219,7 +219,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-bold text-gray-800 text-sm">Email</p>
-                  <p className="text-gray-600 font-medium">contact@nspt.com</p>
+                  <p className="text-gray-600 font-medium">info@nextsphere.co.in</p>
                 </div>
               </motion.div>
               
@@ -236,7 +236,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-bold text-gray-800 text-sm">Phone</p>
-                  <p className="text-gray-600 font-medium">+1 (555) 123-4567</p>
+                  <p className="text-gray-600 font-medium">+91-90780 27948</p>
                 </div>
               </motion.div>
               
@@ -253,7 +253,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-bold text-gray-800 text-sm">Address</p>
-                  <p className="text-gray-600 font-medium text-sm">Silicon Valley, CA</p>
+                  <p className="text-gray-600 font-medium text-sm">Gurgaon, Haryana, India</p>
                 </div>
               </motion.div>
             </div>
@@ -265,7 +265,7 @@ const Contact = () => {
                   { icon: FaFacebook, color: 'bg-blue-600' },
                   { icon: FaTwitter, color: 'bg-blue-400' },
                   { icon: FaLinkedin, color: 'bg-blue-700' },
-                  { icon: FaInstagram, color: 'bg-pink-600' }
+                  { icon: FaYoutube, color: 'bg-red-600' }
                 ].map((social, index) => (
                   <motion.a
                     key={index}

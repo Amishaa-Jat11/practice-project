@@ -7,26 +7,30 @@ const Services = () => {
     {
       icon: <FaUsers className="text-5xl text-blue-600" />,
       title: "HR Software",
-      description: "Comprehensive human resource management solutions with employee tracking, payroll, and performance analytics.",
-      features: ["Employee Management", "Payroll Processing", "Performance Tracking", "Leave Management"]
+      description: "AI-powered HR Automation Platform with attendance automation, punch-in/out sync, payroll, leave tracker, performance reports.",
+      features: ["Attendance Automation", "Punch-in/out Sync", "Payroll Processing", "Leave Tracker"],
+      cta: "View Demo / Request Access"
     },
     {
       icon: <FaCalculator className="text-5xl text-emerald-600" />,
-      title: "Accounting App",
-      description: "Advanced accounting software for financial management, invoicing, and real-time business insights.",
-      features: ["Financial Reporting", "Invoice Management", "Tax Compliance", "Budget Planning"]
+      title: "NextBook (Accounting App)",
+      description: "Automatic End to End Bookkeeping Using AI with GST Filing, TDS Return, Auto Reconciliation, Balance Sheet Finalise.",
+      features: ["GST Filing", "TDS Return", "Auto Reconciliation", "Balance Sheet Finalise"],
+      cta: "Get Free Trial"
     },
     {
       icon: <FaRobot className="text-5xl text-slate-600" />,
-      title: "AI Tools",
-      description: "Cutting-edge artificial intelligence solutions for automation, data analysis, and predictive modeling.",
-      features: ["Machine Learning", "Data Analytics", "Process Automation", "Predictive Insights"]
+      title: "NextSphere AI",
+      description: "AI & Analytics Solutions with predictive analytics, chatbot automation, AI forecasting, sentiment analysis.",
+      features: ["Predictive Analytics", "Chatbot Automation", "AI Forecasting", "Sentiment Analysis"],
+      cta: "Explore AI Solutions"
     },
     {
       icon: <FaPlane className="text-5xl text-blue-500" />,
-      title: "Drones",
-      description: "Professional drone solutions for surveillance, mapping, delivery, and industrial applications.",
-      features: ["Aerial Surveillance", "Mapping & Survey", "Delivery Services", "Industrial Inspection"]
+      title: "AgriDrone / AgriTech",
+      description: "Drone-based AgriTech Solutions with drone mapping, soil analysis, crop tracking, smart irrigation.",
+      features: ["Drone Mapping", "Soil Analysis", "Crop Tracking", "Smart Irrigation"],
+      cta: "Learn AgriTech"
     }
   ];
 
@@ -78,7 +82,7 @@ const Services = () => {
                 whileTap={{ scale: 0.95 }}
                 className="w-full mt-6 bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
-                Learn More
+                {service.cta}
               </motion.button>
             </motion.div>
           ))}
