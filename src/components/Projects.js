@@ -5,29 +5,29 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 const Projects = () => {
   const projects = [
     {
-      title: "Enterprise HR Platform",
-      description: "Complete HR management system for a Fortune 500 company with 10,000+ employees",
+      title: "AI-Powered HR Automation",
+      description: "Complete HR automation system serving 10+ clients with intelligent attendance and payroll management",
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop",
       technologies: ["React", "Node.js", "MongoDB", "AWS"],
       category: "HR Software"
     },
     {
-      title: "AI-Powered Analytics Dashboard",
-      description: "Real-time business intelligence platform with machine learning insights",
+      title: "NextSphere AI Analytics",
+      description: "Real-time business intelligence platform serving 15+ business teams with AI insights",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop",
       technologies: ["Python", "TensorFlow", "React", "PostgreSQL"],
       category: "AI Tools"
     },
     {
-      title: "Automated Accounting Suite",
-      description: "Cloud-based accounting solution with automated invoice processing and tax compliance",
+      title: "NextBook Accounting Suite",
+      description: "AI-powered end-to-end bookkeeping solution with automated GST filing and reconciliation",
       image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&h=300&fit=crop",
       technologies: ["Vue.js", "Laravel", "MySQL", "Docker"],
       category: "Accounting"
     },
     {
-      title: "Drone Fleet Management",
-      description: "Comprehensive drone monitoring and control system for logistics company",
+      title: "AgriDrone Management Platform",
+      description: "Comprehensive drone-based agricultural monitoring system serving 5+ farmers network",
       image: "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=500&h=300&fit=crop",
       technologies: ["IoT", "React Native", "Firebase", "GPS"],
       category: "Drones"
@@ -61,7 +61,7 @@ const Projects = () => {
         >
           <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent mb-4">Our Projects</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Showcasing our successful implementations and innovative solutions across various industries
+            Showcasing our AI-powered solutions: 10+ Clients | 5+ Farmers Network | 15+ Business Teams | 3 Smart Platforms
           </p>
         </motion.div>
 
