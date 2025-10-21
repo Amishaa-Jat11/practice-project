@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaLinkedin, FaYoutube, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Footer = () => {
   const quickLinks = [
@@ -13,19 +13,19 @@ const Footer = () => {
   ];
 
   const services = [
-    'HR Software',
-    'Accounting App',
-    'AI Tools',
-    'Drone Solutions',
-    'Custom Development',
-    'Consulting'
+    'Smart HR Automation',
+    'NextBook Accounting',
+    'NextSphere AI',
+    'AgriDrone / AgriTech',
+    'AI & Analytics Solutions',
+    'Intelligent Automation'
   ];
 
   const socialLinks = [
     { icon: FaFacebook, href: '#', color: 'hover:text-blue-600' },
     { icon: FaTwitter, href: '#', color: 'hover:text-blue-400' },
     { icon: FaLinkedin, href: '#', color: 'hover:text-blue-700' },
-    { icon: FaInstagram, href: '#', color: 'hover:text-pink-600' }
+    { icon: FaYoutube, href: '#', color: 'hover:text-red-600' }
   ];
 
   return (
@@ -51,8 +51,8 @@ const Footer = () => {
               Next Sphere Product & Technology
             </motion.h3>
             <p className="text-gray-300 mb-6 leading-relaxed text-lg">
-              Empowering businesses with innovative technology solutions. 
-              We transform ideas into powerful digital experiences.
+              Empowering Businesses with Intelligent Automation — From Human to AI. 
+              We are a next-generation technology company building integrated solutions in AI and ML.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -112,7 +112,7 @@ const Footer = () => {
                 <div className="bg-blue-600 p-2 rounded-lg mr-3 group-hover:bg-blue-500 transition-colors">
                   <FaEnvelope className="text-white text-sm" />
                 </div>
-                <span className="text-gray-300">contact@nspt.com</span>
+                <span className="text-gray-300">info@nextsphere.co.in</span>
               </motion.div>
               <motion.div 
                 whileHover={{ x: 5 }}
@@ -121,7 +121,7 @@ const Footer = () => {
                 <div className="bg-emerald-600 p-2 rounded-lg mr-3 group-hover:bg-emerald-500 transition-colors">
                   <FaPhone className="text-white text-sm" />
                 </div>
-                <span className="text-gray-300">+1 (555) 123-4567</span>
+                <span className="text-gray-300">+91-90780 27948</span>
               </motion.div>
               <motion.div 
                 whileHover={{ x: 5 }}
@@ -131,7 +131,7 @@ const Footer = () => {
                   <FaMapMarkerAlt className="text-white text-sm" />
                 </div>
                 <span className="text-gray-300">
-                  Silicon Valley, CA
+                  Gurgaon, Haryana, India
                 </span>
               </motion.div>
             </div>
@@ -149,7 +149,7 @@ const Footer = () => {
         >
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-300 mb-4 md:mb-0 font-medium">
-              © 2024 Next Sphere Product & Technology. All rights reserved.
+              © 2025 Next Sphere Product & Technology. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
               <motion.a 

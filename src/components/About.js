@@ -35,9 +35,9 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent mb-4">About NSPT</h2>
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent mb-4">About Next Sphere Product and Technology</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We are a forward-thinking technology company dedicated to transforming businesses through innovative solutions
+            We are a next-generation technology company building integrated solutions in AI and ML — helping organizations automate operations, boost efficiency, and scale smartly.
           </p>
         </motion.div>
 
@@ -64,7 +64,7 @@ const About = () => {
             </motion.div>
             <h3 className="relative z-10 text-2xl font-bold mb-4 text-gray-800">Vision</h3>
             <p className="relative z-10 text-gray-700 leading-relaxed">
-              To be the leading provider of innovative technology solutions that empower businesses to achieve their full potential in the digital age.
+              To revolutionize business operations with smart, automated, and data-driven solutions accessible to everyone — from startups to enterprises.
             </p>
             <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-indigo-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
           </motion.div>
@@ -91,7 +91,7 @@ const About = () => {
             </motion.div>
             <h3 className="relative z-10 text-2xl font-bold mb-4 text-gray-800">Mission</h3>
             <p className="relative z-10 text-gray-700 leading-relaxed">
-              To deliver cutting-edge software solutions, AI tools, and technology services that drive efficiency, innovation, and growth for our clients.
+              We aim to bridge the gap between technology and real-world challenges — empowering businesses, innovators, and industries through intelligent ecosystems.
             </p>
             <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 to-teal-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
           </motion.div>
@@ -135,9 +135,9 @@ const About = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-emerald-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           <h3 className="relative z-10 text-3xl font-bold text-center mb-8 text-gray-800">Founder's Message</h3>
           <p className="relative z-10 text-lg text-gray-700 text-center max-w-4xl mx-auto leading-relaxed mb-6">
-            "At NSPT, we believe technology should be a catalyst for positive change. Our journey began with a simple vision: 
-            to create solutions that not only meet today's challenges but anticipate tomorrow's opportunities. 
-            Every line of code we write, every solution we design, is crafted with our clients' success in mind."
+            "At Next Sphere, we believe technology should be a catalyst for positive change. Our journey began with a simple vision: 
+            to create intelligent automation solutions that not only meet today's challenges but anticipate tomorrow's opportunities. 
+            Every AI model we build, every automation we design, is crafted with our clients' success in mind."
           </p>
           <p className="relative z-10 text-center font-bold text-blue-600 text-lg">-Tushar Rout, CEO & Founder</p>
           <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full"></div>

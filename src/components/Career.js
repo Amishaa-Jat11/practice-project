@@ -88,7 +88,7 @@ const Career = () => {
         >
           <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent mb-4">Join Our Team</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Be part of an innovative team that's shaping the future of technology. We're always looking for talented individuals who share our passion for excellence.
+            Be part of an innovative team that's shaping the future of AI and automation. We're always looking for talented individuals who share our passion for intelligent solutions.
           </p>
         </motion.div>
 
@@ -159,7 +159,7 @@ const Career = () => {
         >
           <h3 className="text-2xl font-semibold mb-4">Don't see the right position?</h3>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            We're always interested in meeting talented individuals. Send us your resume and let us know how you'd like to contribute to our team.
+            We're always interested in meeting talented individuals passionate about AI and automation. Send us your resume and let us know how you'd like to contribute to our intelligent solutions.
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
