@@ -5,54 +5,39 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 const Projects = () => {
   const projects = [
     {
-      title: "AI-Powered HR Automation",
-      description: "Complete HR automation system serving 10+ clients with intelligent attendance and payroll management",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop",
-      technologies: ["React", "Node.js", "MongoDB", "AWS"],
-      category: "HR Software"
+      title: "NextBook Accounting",
+      description: "Automated accounting platform for MSMEs",
+      image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=500&h=300&fit=crop", // Accounting/finance dashboard
+      technologies: ["Python", "Django", "Power BI"],
+      category: "Live"
     },
     {
-      title: "NextSphere AI Analytics",
-      description: "Real-time business intelligence platform serving 15+ business teams with AI insights",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop",
-      technologies: ["Python", "TensorFlow", "React", "PostgreSQL"],
-      category: "AI Tools"
+      title: "HR Portal",
+      description: "Attendance + Payroll Automation",
+      image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&h=300&fit=crop", // HR/team management
+      technologies: ["Flutter", "Node.js"],
+      category: "In Testing"
     },
     {
-      title: "NextBook Accounting Suite",
-      description: "AI-powered end-to-end bookkeeping solution with automated GST filing and reconciliation",
-      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&h=300&fit=crop",
-      technologies: ["Vue.js", "Laravel", "MySQL", "Docker"],
-      category: "Accounting"
-    },
-    {
-      title: "AgriDrone Management Platform",
-      description: "Comprehensive drone-based agricultural monitoring system serving 5+ farmers network",
-      image: "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=500&h=300&fit=crop",
-      technologies: ["IoT", "React Native", "Firebase", "GPS"],
-      category: "Drones"
-    },
-    {
-      title: "Smart City Infrastructure",
-      description: "IoT-based city management platform with real-time monitoring and analytics",
-      image: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=500&h=300&fit=crop",
-      technologies: ["IoT", "Angular", "Node.js", "InfluxDB"],
-      category: "Smart Solutions"
-    },
-    {
-      title: "E-commerce AI Assistant",
-      description: "Intelligent chatbot and recommendation system for online retail platform",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
-      technologies: ["NLP", "React", "Python", "Redis"],
-      category: "AI Tools"
+      title: "AgriDrone Project",
+      description: "Drone-based crop monitoring in Odisha",
+      image: "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=500&h=300&fit=crop", // Agricultural drone/farming
+      technologies: ["AI", "IoT"],
+      category: "Pilot Phase"
     }
   ];
 
 
 
   return (
-    <section id="projects" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-20 bg-gradient-to-br from-slate-100 via-blue-50 to-emerald-50 relative overflow-hidden scroll-mt-20">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-16 left-16 w-64 h-64 bg-blue-300 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-16 right-16 w-80 h-80 bg-emerald-300 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-slate-300 rounded-full blur-3xl animate-pulse delay-500"></div>
+      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -73,49 +58,96 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              whileHover={{ y: -10 }}
-              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+              whileHover={{ 
+                y: -15,
+                scale: 1.03,
+                rotateY: 5,
+                boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+                transition: { duration: 0 }
+              }}
+              className="relative bg-white rounded-2xl overflow-hidden shadow-xl border border-gray-100 group cursor-pointer"
             >
+              {/* Card glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              {/* Decorative corner elements */}
+              <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-blue-200/30 to-emerald-200/30 rounded-full blur-xl transform translate-x-8 -translate-y-8 group-hover:scale-150 transition-transform duration-500"></div>
               <div className="relative overflow-hidden">
-                <img
+                <motion.img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
+                  className="w-full h-48 object-cover"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.3 }}
                 />
-                <div className="absolute top-4 right-4">
-                  <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
+                {/* Image overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <motion.div 
+                  className="absolute top-4 right-4"
+                  whileHover={{ scale: 1.1 }}
+                >
+                  <span className="bg-gradient-to-r from-blue-600 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg backdrop-blur-sm">
                     {project.category}
                   </span>
-                </div>
+                </motion.div>
+                {/* Floating icon */}
+                <motion.div 
+                  className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100"
+                  initial={{ scale: 0 }}
+                  whileHover={{ scale: 1 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <div className="bg-white/90 backdrop-blur-sm p-2 rounded-full shadow-lg">
+                    <FaExternalLinkAlt className="text-blue-600" />
+                  </div>
+                </motion.div>
               </div>
               
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-3 text-gray-900">
+              <div className="relative z-10 p-6">
+                <motion.h3 
+                  className="text-xl font-bold mb-3 text-gray-900 group-hover:text-blue-700 transition-colors duration-300"
+                  whileHover={{ x: 5 }}
+                >
                   {project.title}
-                </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                </motion.h3>
+                <p className="text-gray-600 mb-4 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
                   {project.description}
                 </p>
                 
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech, techIndex) => (
-                    <span
+                    <motion.span
                       key={techIndex}
-                      className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-sm"
+                      className="bg-gradient-to-r from-blue-100 to-emerald-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium border border-blue-200 group-hover:border-blue-300 transition-colors duration-300"
+                      whileHover={{ scale: 1.1, y: -2 }}
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ delay: (index * 0.1) + (techIndex * 0.1) }}
                     >
                       {tech}
-                    </span>
+                    </motion.span>
                   ))}
                 </div>
                 
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ 
+                    scale: 1.05,
+                    x: 5,
+                    color: "#059669"
+                  }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex items-center text-emerald-600 hover:text-emerald-700 font-semibold"
+                  className="flex items-center text-emerald-600 font-semibold group-hover:text-emerald-700 transition-colors duration-300"
                 >
-                  View Details <FaExternalLinkAlt className="ml-2" />
+                  View Details 
+                  <motion.div
+                    whileHover={{ x: 3 }}
+                    className="ml-2"
+                  >
+                    <FaExternalLinkAlt />
+                  </motion.div>
                 </motion.button>
               </div>
+              {/* Bottom accent line */}
+              <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-emerald-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
             </motion.div>
           ))}
         </div>
