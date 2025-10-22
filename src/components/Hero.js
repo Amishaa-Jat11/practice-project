@@ -25,27 +25,28 @@ const Hero = () => {
   const features = [
     {
       icon: <FaUsers className="text-4xl text-blue-400" />,
-      title: "Smart HR",
+      title: "🏢 Smart HR",
       description: "AI-powered HR Automation Platform"
     },
     {
       icon: <FaCalculator className="text-4xl text-emerald-400" />,
-      title: "NextBook",
-      description: "AI-powered Accounting Solution"
+      title: "📊 NextBook",
+      description: "Automatic End to End Bookkeeping Using AI"
     },
     {
       icon: <FaRobot className="text-4xl text-slate-400" />,
-      title: "AI & Analytics",
-      description: "Smart Decision-Making with AI Insights"
+      title: "🤖 AI & Analytics Solutions",
+      description: "Predictive analytics, chatbot automation, AI forecasting"
     },
     {
       icon: <FaPlane className="text-4xl text-blue-500" />,
-      title: "AgriTech Drone",
-      description: "Empowering Farmers with Smart AgriTech"
+      title: "🚁 AgriTech Drone Innovation",
+      description: "Drone mapping, soil analysis, crop tracking, smart irrigation"
     }
   ];
 
   return (
+    <>
     <section id="home" className="min-h-screen relative flex items-center overflow-hidden">
       {/* Hero Background Images */}
       <div className="absolute inset-0">
@@ -140,121 +141,88 @@ const Hero = () => {
             </motion.button>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="grid md:grid-cols-4 gap-6 mt-16"
-          >
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50, scale: 0.8 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                whileHover={{ 
-                  scale: 1.05, 
-                  y: -8,
-                  backgroundColor: "rgba(255, 255, 255, 0.2)",
-                  borderColor: "rgba(59, 130, 246, 1)",
-                  boxShadow: "0 15px 30px rgba(59, 130, 246, 0.3)",
-                  transition: { duration: 0.15, ease: "easeOut" }
-                }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ 
-                  delay: 1.2 + index * 0.15, 
-                  duration: 0.15,
-                  ease: "easeOut"
-                }}
-                className="bg-white/10 backdrop-blur-md rounded-xl p-8 text-center border border-white/20 shadow-xl cursor-pointer group"
-              >
-                <motion.div 
-                  className="flex justify-center mb-4"
-                  whileHover={{ 
-                    scale: 1.1,
-                    transition: { duration: 0.2 }
-                  }}
-                >
-                  {feature.icon}
-                </motion.div>
-                <motion.h3 
-                  className="text-xl font-semibold text-white mb-2 group-hover:text-emerald-300 transition-colors duration-300 drop-shadow-lg"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 1.4 + index * 0.15 }}
-                >
-                  {feature.title}
-                </motion.h3>
-                <motion.p 
-                  className="text-gray-200 group-hover:text-white transition-colors duration-300 drop-shadow-md"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 1.6 + index * 0.15 }}
-                >
-                  {feature.description}
-                </motion.p>
-              </motion.div>
-            ))}
-          </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 2.0 }}
-            className="mt-16 pt-8 border-t border-white/20"
-          >
-            <motion.div 
-              className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2.2, staggerChildren: 0.2 }}
-            >
-              {[
-                { number: "10+", label: "Clients" },
-                { number: "5+", label: "Farmers Network" },
-                { number: "15+", label: "Business Teams" },
-                { number: "3", label: "Smart Platforms" }
-              ].map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ 
-                    delay: 2.4 + index * 0.1,
-                    type: "spring",
-                    stiffness: 200
-                  }}
-                  whileHover={{ 
-                    scale: 1.1,
-                    y: -5,
-                    transition: { duration: 0.2 }
-                  }}
-                  className="group cursor-pointer"
-                >
-                  <motion.h3 
-                    className="text-2xl md:text-3xl font-bold text-white drop-shadow-lg group-hover:text-emerald-300 transition-colors duration-300"
-                    animate={{
-                      textShadow: [
-                        "0 0 10px rgba(16, 185, 129, 0.5)",
-                        "0 0 20px rgba(16, 185, 129, 0.8)",
-                        "0 0 10px rgba(16, 185, 129, 0.5)"
-                      ]
-                    }}
-                    transition={{
-                      textShadow: { duration: 2, repeat: Infinity, ease: "easeInOut" }
-                    }}
-                  >
-                    {stat.number}
-                  </motion.h3>
-                  <p className="text-gray-200 text-sm font-medium group-hover:text-white transition-colors duration-300 drop-shadow-md">
-                    {stat.label}
-                  </p>
-                </motion.div>
-              ))}
-            </motion.div>
-          </motion.div>
         </div>
       </div>
     </section>
+
+    {/* Key Features Section */}
+    <section className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent mb-4">
+            Key Features & Highlights
+          </h2>
+        </motion.div>
+
+        <div className="grid md:grid-cols-4 gap-8 mb-16">
+          {features.map((feature, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              whileHover={{ 
+                scale: 1.05, 
+                y: -10,
+                backgroundColor: "rgba(59, 130, 246, 0.05)",
+                borderColor: "rgba(59, 130, 246, 0.3)",
+                transition: { duration: 0 }
+              }}
+              className="bg-gray-50 rounded-xl p-8 text-center border border-gray-200 shadow-lg cursor-pointer"
+            >
+              <div className="flex justify-center mb-4">
+                {feature.icon}
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                {feature.title}
+              </h3>
+              <p className="text-gray-600">
+                {feature.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Quick Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="bg-gradient-to-r from-blue-600 to-emerald-600 rounded-2xl p-8 text-white"
+        >
+          <h3 className="text-2xl font-bold text-center mb-8">Trusted By</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {[
+              { number: "10+", label: "Clients" },
+              { number: "5+", label: "Farmers Network" },
+              { number: "15+", label: "Business Teams" },
+              { number: "3", label: "Smart Platforms" }
+            ].map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ scale: 1.1 }}
+                className="cursor-pointer"
+              >
+                <h4 className="text-3xl font-bold mb-2">{stat.number}</h4>
+                <p className="text-blue-100">{stat.label}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+    </section>
+    </>
   );
 };
 

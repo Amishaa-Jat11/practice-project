@@ -6,7 +6,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    company: '',
+    phone: '',
     message: ''
   });
 
@@ -22,11 +22,11 @@ const Contact = () => {
     console.log('Form submitted:', formData);
     // Handle form submission here
     alert('Thank you for your inquiry! We will get back to you soon.');
-    setFormData({ name: '', email: '', company: '', message: '' });
+    setFormData({ name: '', email: '', phone: '', message: '' });
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-emerald-50 relative overflow-hidden">
+    <section id="contact" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-emerald-50 relative overflow-hidden scroll-mt-20">
       {/* Background decorations */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl animate-pulse"></div>
@@ -134,16 +134,16 @@ const Contact = () => {
                 transition={{ delay: 0.3 }}
               >
                 <label className="block text-sm font-bold text-gray-700 mb-3">
-                  Company Name
+                  Phone Number
                 </label>
                 <motion.input
                   whileFocus={{ scale: 1.02, boxShadow: "0 10px 25px rgba(99, 102, 241, 0.15)" }}
-                  type="text"
-                  name="company"
-                  value={formData.company}
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
                   onChange={handleChange}
                   className="w-full px-6 py-4 border-2 border-gray-200 rounded-2xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-300 bg-white/70 backdrop-blur-sm"
-                  placeholder="Your company name"
+                  placeholder="Your phone number"
                 />
               </motion.div>
               
