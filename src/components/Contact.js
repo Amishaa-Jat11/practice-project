@@ -282,7 +282,7 @@ const Contact = () => {
             
             <div className="mt-6 pt-6 border-t border-gray-200">
               <div className="text-center">
-                <p className="text-sm text-gray-600 mb-2">⚡ Quick Response</p>
+                <p className="text-sm text-gray-600 mb-2"> Quick Response</p>
                 <div className="bg-emerald-100 text-emerald-700 px-3 py-2 rounded-lg text-sm font-medium">
                   24h Response Time
                 </div>
