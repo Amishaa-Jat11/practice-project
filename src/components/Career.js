@@ -35,29 +35,43 @@ const Career = () => {
     }
   ];
 
+  const departments = [
+    "Tech",
+    "HR", 
+    "Accounts",
+    "Operations",
+    "Agri Research"
+  ];
+
   const openPositions = [
     {
-      title: "Senior Full Stack Developer",
-      department: "Engineering",
-      location: "Remote / San Francisco",
+      title: "Software Developer",
+      department: "Tech",
+      location: "Gurgaon, Haryana",
       type: "Full-time"
     },
     {
-      title: "AI/ML Engineer",
-      department: "AI Research",
-      location: "San Francisco",
+      title: "HR Executive",
+      department: "HR",
+      location: "Gurgaon, Haryana",
       type: "Full-time"
     },
     {
-      title: "Product Designer",
-      department: "Design",
-      location: "Remote",
+      title: "Accounts Manager",
+      department: "Accounts",
+      location: "Gurgaon, Haryana",
       type: "Full-time"
     },
     {
-      title: "DevOps Engineer",
-      department: "Infrastructure",
-      location: "San Francisco",
+      title: "Operations Coordinator",
+      department: "Operations",
+      location: "Gurgaon, Haryana",
+      type: "Full-time"
+    },
+    {
+      title: "Agri Research Analyst",
+      department: "Agri Research",
+      location: "Gurgaon, Haryana",
       type: "Full-time"
     }
   ];
@@ -78,7 +92,7 @@ const Career = () => {
   };
 
   return (
-    <section id="careers" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-emerald-50">
+    <section id="careers" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-emerald-50 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -86,9 +100,9 @@ const Career = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent mb-4">Join Our Team</h2>
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent mb-4">We're building the future — Join us!</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Be part of an innovative team that's shaping the future of AI and automation. We're always looking for talented individuals who share our passion for intelligent solutions.
+            Attract young talent and future team members to be part of our innovative journey.
           </p>
         </motion.div>
 
@@ -118,7 +132,7 @@ const Career = () => {
           viewport={{ once: true }}
           className="bg-white rounded-xl p-8 shadow-lg mb-12"
         >
-          <h3 className="text-3xl font-semibold text-center mb-8">Open Positions</h3>
+          <h3 className="text-3xl font-semibold text-center mb-8">Current Openings</h3>
           <div className="space-y-4">
             {openPositions.map((position, index) => (
               <motion.div
@@ -157,9 +171,9 @@ const Career = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h3 className="text-2xl font-semibold mb-4">Don't see the right position?</h3>
+          <h3 className="text-2xl font-semibold mb-4">Future Talent Pipeline</h3>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            We're always interested in meeting talented individuals passionate about AI and automation. Send us your resume and let us know how you'd like to contribute to our intelligent solutions.
+            Even if we're not hiring right now, drop your resume — we'll reach out when roles open.
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -167,7 +181,7 @@ const Career = () => {
             onClick={() => setShowForm(true)}
             className="bg-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
           >
-            Send General Application
+            Submit Resume / Join Talent Pool
           </motion.button>
         </motion.div>
 
