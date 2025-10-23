@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { FaUsers, FaCalculator, FaRobot, FaPlane } from 'react-icons/fa';
 
 const Hero = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   // Partner logos for trusted by section
   const partnerLogos = [
