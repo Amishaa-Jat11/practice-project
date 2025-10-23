@@ -12,14 +12,7 @@ const Footer = () => {
     { name: 'Careers', href: '#careers' }
   ];
 
-  const services = [
-    'Smart HR Automation',
-    'NextBook Accounting',
-    'NextSphere AI',
-    'AgriDrone / AgriTech',
-    'AI & Analytics Solutions',
-    'Intelligent Automation'
-  ];
+
 
   const socialLinks = [
     { icon: FaFacebook, href: '#', color: 'hover:text-blue-600' },
