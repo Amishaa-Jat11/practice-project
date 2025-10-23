@@ -47,7 +47,12 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex-shrink-0 flex items-center"
+            whileTap={{ scale: 0.95 }}
+            onClick={() => {
+              document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });
+              setActiveSection('home');
+            }}
+            className="flex-shrink-0 flex items-center cursor-pointer"
           >
             <img src={logo1} alt="NSPT Logo" className="h-20 w-auto" />
           </motion.div>
