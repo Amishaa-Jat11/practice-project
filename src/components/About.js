@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaEye, FaBullseye, FaUsers } from 'react-icons/fa';
+import { FaEye, FaBullseye } from 'react-icons/fa';
 
 const About = () => {
   const team = [
