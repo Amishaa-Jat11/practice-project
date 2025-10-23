@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaUsers, FaCalculator, FaRobot, FaPlane } from 'react-icons/fa';
+import { FaUsers, FaCalculator, FaRobot, FaHelicopter } from 'react-icons/fa';
 
 const Services = () => {
   const services = [
@@ -26,7 +26,7 @@ const Services = () => {
       cta: "Explore AI Suite"
     },
     {
-      icon: <FaPlane className="text-5xl text-blue-500" />,
+      icon: <FaHelicopter className="text-5xl text-blue-500" />,
       title: "AgriTech / Drone Solutions",
       description: "Drone mapping, soil analysis, crop tracking, smart irrigation.",
       features: ["Drone Mapping", "Soil Analysis", "Crop Tracking", "Smart Irrigation"],
@@ -55,7 +55,7 @@ const Services = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -64,59 +64,51 @@ const Services = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ 
-                scale: 1.05,
-                y: -10,
-                rotateY: 5,
-                boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
-                transition: { duration: 0 }
+                scale: 1.03,
+                y: -5,
+                boxShadow: "0 20px 40px -12px rgba(0, 0, 0, 0.25)",
+                transition: { duration: 0.15 }
               }}
-              className="relative bg-gradient-to-br from-white via-blue-50 to-emerald-50 rounded-2xl p-8 shadow-xl border border-gray-100 overflow-hidden group cursor-pointer"
+              className="relative bg-gradient-to-br from-white via-blue-50 to-emerald-50 rounded-xl p-6 shadow-lg border border-gray-100 overflow-hidden group cursor-pointer"
             >
               {/* Animated background overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              {/* Decorative elements */}
-              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-200/30 to-emerald-200/30 rounded-full blur-xl transform translate-x-10 -translate-y-10 group-hover:scale-150 transition-transform duration-500"></div>
-              <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-br from-emerald-200/30 to-blue-200/30 rounded-full blur-xl transform -translate-x-8 translate-y-8 group-hover:scale-150 transition-transform duration-500"></div>
               <motion.div 
-                className="relative z-10 flex justify-center mb-6"
-                whileHover={{ scale: 1.2, rotate: 360 }}
-                transition={{ duration: 0.6 }}
+                className="relative z-10 flex justify-center mb-4"
+                whileHover={{ scale: 1.1, rotate: 180 }}
+                transition={{ duration: 0.4 }}
               >
-                <div className="p-4 bg-white rounded-full shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+                <div className="p-3 bg-white rounded-full shadow-md group-hover:shadow-lg transition-shadow duration-300">
                   {service.icon}
                 </div>
               </motion.div>
-              <h3 className="relative z-10 text-2xl font-bold text-center mb-4 text-gray-900 group-hover:text-blue-700 transition-colors duration-300">
+              <h3 className="relative z-10 text-xl font-bold text-center mb-3 text-gray-900 group-hover:text-blue-700 transition-colors duration-300">
                 {service.title}
               </h3>
-              <p className="relative z-10 text-gray-600 text-center mb-6 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+              <p className="relative z-10 text-gray-600 text-center mb-4 text-sm leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
                 {service.description}
               </p>
-              <div className="relative z-10 space-y-3 mb-6">
+              <div className="relative z-10 space-y-2 mb-4">
                 {service.features.map((feature, featureIndex) => (
                   <motion.div 
                     key={featureIndex} 
-                    className="flex items-center p-2 rounded-lg group-hover:bg-white/50 transition-colors duration-300"
+                    className="flex items-center p-1 rounded group-hover:bg-white/50 transition-colors duration-300"
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: (index * 0.1) + (featureIndex * 0.1) }}
                   >
-                    <motion.div 
-                      className="w-3 h-3 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full mr-3 shadow-sm"
-                      whileHover={{ scale: 1.5 }}
-                    ></motion.div>
-                    <span className="text-gray-700 font-medium group-hover:text-gray-800 transition-colors duration-300">{feature}</span>
+                    <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full mr-2"></div>
+                    <span className="text-gray-700 text-sm font-medium group-hover:text-gray-800 transition-colors duration-300">{feature}</span>
                   </motion.div>
                 ))}
               </div>
               <motion.button
                 whileHover={{ 
-                  scale: 1.05,
-                  boxShadow: "0 10px 25px rgba(59, 130, 246, 0.4)",
-                  background: "linear-gradient(135deg, #3B82F6 0%, #10B981 100%)"
+                  scale: 1.02,
+                  boxShadow: "0 8px 20px rgba(59, 130, 246, 0.3)"
                 }}
-                whileTap={{ scale: 0.95 }}
-                className="relative z-10 w-full bg-gradient-to-r from-blue-600 to-emerald-600 text-white py-4 rounded-xl font-semibold shadow-lg overflow-hidden group/btn"
+                whileTap={{ scale: 0.98 }}
+                className="relative z-10 w-full bg-gradient-to-r from-blue-600 to-emerald-600 text-white py-3 rounded-lg font-semibold shadow-md text-sm overflow-hidden group/btn"
               >
                 <span className="relative z-10">{service.cta}</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-blue-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
